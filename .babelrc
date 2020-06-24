@@ -1,0 +1,20 @@
+
+
+{
+    "presets" : [
+        "env",
+        "react"
+    ],
+    "plugins": [
+        "transform-class-properties",     //this is the plugin which helps to get just state and  arrow functions  in react
+                                        //without this plugin  we have to declear state in constructor like this.state and we have to use annonimus functions 
+                                        //with manual binding in the contructor
+        "transform-object-rest-spread"
+    ]
+}
+
+
+//this file  is required because previously we passed presets in command line for babel cli
+
+//now when we use webpack we need to use babel core and by default webpack never runs babel so
+//that's the time to introduce .babelrc file to tell web pack to call the presets when we run the project
